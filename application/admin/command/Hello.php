@@ -22,9 +22,9 @@ class Hello extends Command {
 
     protected function execute(Input $input, Output $output) {
         $begin = time();
-        for ($i = 0; $i < 20000; $i++) {
+        for ($i = 0; $i < 5; $i++) {
             P('测试执行命令！' . $i);
         }
-        P('总时长：' . time() - $begin);
+        P('总时长：' . (time() - $begin));
     }
 }
