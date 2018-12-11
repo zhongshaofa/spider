@@ -18,6 +18,7 @@ namespace app\admin\controller;
 use app\common\service\AuthService;
 use app\common\service\CurlService;
 use app\common\service\NodeService;
+use think\Console;
 use think\Db;
 use think\Controller;
 use think\facade\Env;
@@ -26,8 +27,9 @@ use think\facade\Cache;
 class Test extends Controller {
 
 
-    public function cmd(){
-        call_cli('/www/server/php/72/bin/php think hello &');
+    public function cmd() {
+//        call_cli('/www/server/php/72/bin/php think hello &');
+        Console::call('hello');
         dump('执行命令');
     }
 

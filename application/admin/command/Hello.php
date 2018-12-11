@@ -21,6 +21,10 @@ class Hello extends Command {
     }
 
     protected function execute(Input $input, Output $output) {
-        P('测试执行命令！');
+        $begin = time();
+        for ($i = 0; $i < 20000; $i++) {
+            P('测试执行命令！' . $i);
+        }
+        P('总时长：' . time() - $begin);
     }
 }
