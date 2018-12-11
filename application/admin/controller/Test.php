@@ -26,6 +26,12 @@ use think\facade\Cache;
 class Test extends Controller {
 
 
+    public function cmd(){
+        call_cli('/www/server/php/72/bin/php think hello &');
+        dump('执行命令');
+    }
+
+
     /**
      * 测试
      */
